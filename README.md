@@ -20,8 +20,8 @@ To improve my low-level C programming skills for embedded software development.
 
 ## Set a bit
 ```c
-  00101101   (x)
-| 01000000   (1 << 6)
+   01000000   (1 << 6)
+|  00101101   (x)
 ------------
   01101101   
 ```
