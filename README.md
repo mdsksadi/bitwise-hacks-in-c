@@ -8,12 +8,7 @@ This repository contains my practice notes and C implementations based on bitwis
 - Toggle a bit
 - Convert trailing 0's to 1
 - Extracting the laast significant 1 bit
-- Masked copy
-- Swapping bits
-- Population count
-- Counting bit islands
-- Bit scan forwards
-- Next lexicographic permutation
+-
 
 ## Goal
 To improve my low-level C programming skills for embedded software development.
@@ -23,5 +18,12 @@ To improve my low-level C programming skills for embedded software development.
    01000000   (1 << 6)
 |  00101101   (x)
 ------------
-  01101101   
+   01101101   
+```
+## Clear a bit
+```c
+   10111111   (~(1 << 6))
+&  01101101   (x)
+------------
+   00101101   
 ```
