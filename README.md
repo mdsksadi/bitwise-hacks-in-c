@@ -41,3 +41,12 @@ To improve my low-level C programming skills for embedded software development.
    ----------
    01101111 
 ```
+## Extracting the laast significant 1 bit
+```c
+   01101000 (x)
+   10010111 (~x)
+   10011000 (~x + 1 = -x)
+&  01101000 (x)
+   ----------
+   00001000 (-x & x)
+```
