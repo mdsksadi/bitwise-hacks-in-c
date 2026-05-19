@@ -14,6 +14,11 @@ This repository contains my practice notes and C implementations based on bitwis
 To improve my low-level C programming skills for embedded software development.
 
 ## Set a bit
+**Formula:**
+```bash
+(1<<n) | x
+```
+**Breakdown:**
 ```c
    01000000   (1 << 6)
 |  00101101   (x)
@@ -21,6 +26,11 @@ To improve my low-level C programming skills for embedded software development.
    01101101   
 ```
 ## Clear a bit
+**Formula:**
+```bash
+~(1<<n) & x
+```
+**Breakdown:**
 ```c
    10111111   (~(1 << 6))
 &  01101101   (x)
@@ -28,6 +38,11 @@ To improve my low-level C programming skills for embedded software development.
    00101101   
 ```
 ## Toggle a bit
+**Formula:**
+```bash
+(1<<n) ^ x
+```
+**Breakdown:**
 ```c
    01000000 (1<<6)
 ^  00101101 (x)
@@ -35,6 +50,11 @@ To improve my low-level C programming skills for embedded software development.
    01101101 
 ```
 ## Convert trailing 0's to 1
+**Formula:**
+```bash
+(x-1) | x
+```
+**Breakdown:**
 ```c
    01100111 (x-1)
 |  01101000 (x)
@@ -42,6 +62,11 @@ To improve my low-level C programming skills for embedded software development.
    01101111 
 ```
 ## Extracting the laast significant 1 bit
+**Formula:**
+```bash
+-x & x
+```
+**Breakdown:**
 ```c
    01101000 (x)
    10010111 (~x)
