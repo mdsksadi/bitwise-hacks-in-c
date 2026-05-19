@@ -27,3 +27,10 @@ To improve my low-level C programming skills for embedded software development.
 ------------
    00101101   
 ```
+## Toggle a bit
+```c
+   01000000 (1<<6)
+^  00101101 (x)
+   ----------
+   01101101 
+```
