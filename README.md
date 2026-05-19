@@ -34,3 +34,10 @@ To improve my low-level C programming skills for embedded software development.
    ----------
    01101101 
 ```
+## Convert trailing 0's to 1
+```c
+   01100111 (x-1)
+|  01101000 (x)
+   ----------
+   01101111 
+```
