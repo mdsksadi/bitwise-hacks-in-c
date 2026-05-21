@@ -8,7 +8,7 @@ This repository contains my practice notes and C implementations based on bitwis
 - Toggle a bit
 - Convert trailing 0's to 1
 - Extracting the laast significant 1 bit
--
+- Masked Copy
 
 ## Goal
 To improve my low-level C programming skills for embedded software development.
