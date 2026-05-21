@@ -9,6 +9,7 @@ This repository contains my practice notes and C implementations based on bitwis
 - Convert trailing 0's to 1
 - Extracting the laast significant 1 bit
 - Masked Copy
+- Swapping Bits
 
 ## Goal
 To improve my low-level C programming skills for embedded software development.
@@ -90,4 +91,40 @@ M = 01100101
 |  00010000 (A & ~M) // 10011010 (~M)
    ----------------------------------
    01010101 (B & M) | (A & ~M)
+```
+## Swapping Bits
+**Formula:**
+```bash
+P = ((x >> A) ^ (x >> B)) & 1;
+if P=0, do nothing.
+Otherwise,
+x ^= (P << A);
+x ^= (P << B);
+```
+**Breakdown:**
+```c
+x = 01100100
+A = 3
+B = 5
+
+So, P = ((x >> A) ^ (x >> B)) & 1;
+
+   00001100 (x >> A)
+^  00000011 (x >> B)
+   -----------------
+   00001111 (x >> A) ^ (x >> B)
+&  00000001 (1)
+   --------------------------------------
+   00000001 ((x >> A) ^ (x >> B)) & 1 = P
+
+// Swap the bits
+   00001000 (P << A)
+^  01100100 (x)
+   -----------------
+   01101100 (x ^= (P << A))
+
+   00100000 (P << B)
+^  01101100 (x)
+   ------------------------
+   01001100 (x ^= (P << B))
 ```
