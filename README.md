@@ -75,3 +75,19 @@ To improve my low-level C programming skills for embedded software development.
    ----------
    00001000 (-x & x)
 ```
+## Masked Copy
+**Formula:**
+```bash
+(B & M) | (A & ~M)
+```
+**Breakdown:**
+```c
+A = 01110100
+B = 11010111
+M = 01100101
+
+   01000101 (B & M)
+|  00010000 (A & ~M) // 10011010 (~M)
+   ----------------------------------
+   01010101 (B & M) | (A & ~M)
+```
