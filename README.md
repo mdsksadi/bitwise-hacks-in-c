@@ -11,6 +11,9 @@ This repository contains my practice notes and C implementations based on bitwis
 - Masked Copy
 - Swapping Bits
 - Kernighan's Population Count
+- Counting Bit Islands or Counting Bit Blocks
+- BSF (Bit Scan Forwards)
+- Next Lexicographic Permutation
 
 ## Goal
 To improve my low-level C programming skills for embedded software development.
