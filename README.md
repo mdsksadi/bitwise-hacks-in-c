@@ -10,6 +10,7 @@ This repository contains my practice notes and C implementations based on bitwis
 - Extracting the laast significant 1 bit
 - Masked Copy
 - Swapping Bits
+- Kernighan's Population Count
 
 ## Goal
 To improve my low-level C programming skills for embedded software development.
@@ -127,4 +128,27 @@ So, P = ((x >> A) ^ (x >> B)) & 1;
 ^  01101100 (x)
    ------------------------
    01001100 (x ^= (P << B))
+```
+## Kernighan's Population Count
+**Formula:**
+```bash
+x = x & (x - 1)
+```
+**Breakdown:**
+```c
+x = 01100011;
+
+   01100011 (x)
+   01100010 (x-1)
+   ---------------------------------------
+   01100010 (x = x & (x - 1)) // So, C = 1
+   01100001 (x-1)
+   ---------------------------------------
+   01100000 (x = x & (x - 1)) // So, C = 2
+   01011111 (x-1)
+   ---------------------------------------
+   01000000 (x = x & (x - 1)) // So, C = 3
+   00111111 (x-1)
+   ---------------------------------------
+   00000000 (x = x & (x - 1)) // So, C = 4
 ```
